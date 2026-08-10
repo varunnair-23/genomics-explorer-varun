@@ -1,18 +1,35 @@
+# Compounds present in sci-Plex2 (A549 lung adenocarcinoma).
+# perturbation_label must match the 'perturbation' column in the single-cell data.
 compounds:
-  - name: Imatinib
-    class: kinase inhibitor
-    target: BCR-ABL
-    pathway: MAPK / PI3K-Akt signaling
-    smiles: "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5"
+  - name: Nutlin-3A
+    perturbation_label: Nutlin
+    class: MDM2-p53 inhibitor
+    target: MDM2
+    pathway: p53 signaling
+    smiles: "CC(C)OC1=C(C=CC(=C1)OC)C2=N[C@H]([C@H](N2C(=O)N3CCNC(=O)C3)C4=CC=C(C=C4)Cl)C5=CC=C(C=C5)Cl"
+    expected_formula: C30H30Cl2N4O4
+    expected_mw: 581.5
+    pubchem_cid: 11433190
+    marker_genes: [CDKN1A, MDM2, BAX, BBC3, TP53I3, GADD45A, GDF15]
 
-  - name: Paclitaxel
-    class: microtubule stabilizer
-    target: beta-tubulin
-    pathway: mitotic spindle / apoptosis
-    smiles: "CC1=C2C(C(=O)C3=C(C2=O)C=CC=C3OC)C(O)(C(=O)CO)CC4C1C(C(C(C4OC5CC(C(C(O5)C)O)N)O)O)OC(=O)C6=CC=CC=C6"
+  - name: Vorinostat
+    perturbation_label: SAHA
+    class: HDAC inhibitor
+    target: HDAC1/2/3/8
+    pathway: epigenetic regulation / cell cycle
+    smiles: "C1=CC=C(C=C1)NC(=O)CCCCCCC(=O)NO"
+    expected_formula: C14H20N2O3
+    expected_mw: 264.32
+    pubchem_cid: 5311
+    marker_genes: [CDKN1A, CDKN1B, HIST1H1C, HIST1H2BK, HEXIM1]
 
-  - name: Doxorubicin
-    class: anthracycline chemotherapy
-    target: topoisomerase II / DNA
-    pathway: DNA damage / p53 signaling
-    smiles: "C[C@H]1[C@H]([C@H](C[C@@H](O1)O[C@H]2C[C@@](CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N)O"
+  - name: BMS-345541
+    perturbation_label: BMS
+    class: IKK inhibitor
+    target: IKBKE / IKK complex
+    pathway: NF-kappa B signaling
+    smiles: "CC1=CC2=C(C=C1)N=C(C3=NC=C(N23)C)NCCN"
+    expected_formula: C14H17N5
+    expected_mw: 255.32
+    pubchem_cid: 9926054
+    marker_genes: [NFKBIA, CXCL1, CXCL8, BIRC5, TNFRSF12A, ICAM1]
