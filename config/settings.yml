@@ -1,0 +1,15 @@
+project: 
+  name: chemical_genomics_explorere
+  phase: week_2_single_cell_analysis
+
+paths:
+  raw_data: data/raw
+  processed_data: data/processed
+  results: results
+  logs: logs
+
+cellxgene:
+  organism: Homo sapiens
+  measurement_name: RNA
+  max_cells_preview: 1000
+  

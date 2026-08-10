@@ -1,0 +1,4 @@
+name,class,target,pathway,smiles,structure_image,molecular_weight,logp,h_donors,h_acceptors,rotatable_bonds
+Imatinib,kinase inhibitor,BCR-ABL,MAPK / PI3K-Akt signaling,CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5,results/chemical_structures/imatinib.png,493.61500000000024,4.590320000000003,2,7,7
+Paclitaxel,microtubule stabilizer,beta-tubulin,mitotic spindle / apoptosis,CC1=C2C(C(=O)C3=C(C2=O)C=CC=C3OC)C(O)(C(=O)CO)CC4C1C(C(C(C4OC5CC(C(C(O5)C)O)N)O)O)OC(=O)C6=CC=CC=C6,results/chemical_structures/paclitaxel.png,695.7180000000003,0.10480000000000222,6,14,7
+Doxorubicin,anthracycline chemotherapy,topoisomerase II / DNA,DNA damage / p53 signaling,C[C@H]1[C@H]([C@H](C[C@@H](O1)O[C@H]2C[C@@](CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N)O,results/chemical_structures/doxorubicin.png,543.5250000000003,0.0012999999999995793,6,12,5

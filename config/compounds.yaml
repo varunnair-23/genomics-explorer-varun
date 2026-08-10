@@ -1,0 +1,18 @@
+compounds:
+  - name: Imatinib
+    class: kinase inhibitor
+    target: BCR-ABL
+    pathway: MAPK / PI3K-Akt signaling
+    smiles: "CC1=C(C=C(C=C1)NC(=O)C2=CC=C(C=C2)CN3CCN(CC3)C)NC4=NC=CC(=N4)C5=CN=CC=C5"
+
+  - name: Paclitaxel
+    class: microtubule stabilizer
+    target: beta-tubulin
+    pathway: mitotic spindle / apoptosis
+    smiles: "CC1=C2C(C(=O)C3=C(C2=O)C=CC=C3OC)C(O)(C(=O)CO)CC4C1C(C(C(C4OC5CC(C(C(O5)C)O)N)O)O)OC(=O)C6=CC=CC=C6"
+
+  - name: Doxorubicin
+    class: anthracycline chemotherapy
+    target: topoisomerase II / DNA
+    pathway: DNA damage / p53 signaling
+    smiles: "C[C@H]1[C@H]([C@H](C[C@@H](O1)O[C@H]2C[C@@](CC3=C2C(=C4C(=C3O)C(=O)C5=C(C4=O)C(=CC=C5)OC)O)(C(=O)CO)O)N)O"

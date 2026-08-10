@@ -1,0 +1,29 @@
+# Ignore all big biological data files
+data/*
+!data/raw/
+!data/processed/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+#Ignore logs but keep folder
+logs/*
+!logs/.gitkeep
+
+#Single-cell file formats
+*.h5ad
+*.h5
+*.rds
+
+#Python cache
+__pycache__/
+*.__pycache__
+
+#R history cahce
+.Rhistory
+.Rdata
+.Rproj.user/
+
+#environment files
+.venv/
+venv/
+.env/
