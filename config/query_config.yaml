@@ -1,39 +1,63 @@
-project: 
-  name: chemical_genomics_explorer
-  phase: census_ingestion
+project:
+  name: genomics-explorer-varun
+  phase: sci_plex2_perturbation_analysis
+  description: >
+    Single-cell chemical genomics for A549 lung adenocarcinoma
+    responses to Nutlin-3A, Vorinostat (SAHA), and BMS-345541
+    versus vehicle control (sci-Plex2).
 
-paths: 
+paths:
+  raw_data: data/raw
   processed_data: data/processed
   logs: logs
   results: results
 
-census: 
-  census_version: "2025-11-08"
-  organism: Homo sapiens
-  organism_key: homo_sapiens
-  measurement_name: RNA
-  tissue_general: liver
-  disease: normal
-  assay: "10x 3' v3"
-  max_cells: 5000
+dataset:
+  source: scPerturb / Zenodo record 13350497
+  citation: "Srivatsan et al., Science 2019 (sci-Plex2); Peidli et al., Nat Methods 2024 (scPerturb)"
+  filename: SrivatsanTrapnell2020_sciplex2.h5ad
+  download_url: "https://zenodo.org/records/13350497/files/SrivatsanTrapnell2020_sciplex2.h5ad?download=1"
+  cell_line: A549
+  disease: lung adenocarcinoma
+  control_label: control
+  perturbation_column: perturbation
+  dose_column: dose_value
+  focus_perturbations:
+    - control
+    - Nutlin
+    - SAHA
+    - BMS
+  min_dose_for_treatment: 10.0
+  max_cells_per_group: 800
+  random_state: 42
 
 qc:
   min_genes_per_cell: 200
-  max_mito_percent: 10.0
+  max_genes_per_cell: 8000
+  max_mito_percent: 20.0
   normalize_target_sum: 10000
 
 manifold:
   n_top_genes: 2000
   n_pcs: 20
   n_neighbors: 15
-  leiden_resolution: 0.8
+  leiden_resolution: 0.6
   random_state: 42
 
+differential_expression:
+  method: wilcoxon
+  min_cells_per_group: 30
+  adjusted_pvalue_cutoff: 0.05
+  min_logfoldchange: 0.25
+  top_genes_for_enrichment: 100
+  output_file: data/processed/drug_response_degs.csv
+
 pathway:
-  marker_file: data/processed/cluster_markers.csv
+  deg_file: data/processed/drug_response_degs.csv
   output_file: data/processed/pathway_enrichment.csv
   gene_column: names
-  cluster_column: group
-  adjusted_pvalue_cutoff: 0.01
-  top_genes_per_cluster: 50
+  group_column: compound
+  direction_column: direction
+  adjusted_pvalue_cutoff: 0.05
+  top_genes_per_group: 75
   enrichr_library: KEGG_2021_Human
