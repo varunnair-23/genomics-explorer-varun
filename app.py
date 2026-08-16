@@ -102,7 +102,9 @@ with tab1:
         descriptors = compound_row[
             [c for c in descriptor_columns if c in compounds.columns]
         ]
-        st.dataframe(descriptors.to_frame(name="value"), width="stretch")
+        desc_df = descriptors.to_frame(name="value")
+        desc_df["value"] = desc_df["value"].astype(str)
+        st.dataframe(desc_df, width="stretch")
 
         st.subheader("SMILES")
         st.code(compound_row["smiles"])
