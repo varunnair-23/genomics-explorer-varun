@@ -150,10 +150,10 @@ with tab2:
         else:
             st.warning("Run plotting later to generate QC UMAP images.")
 
-    st.info(
-        "UMAP is a visualization layer. Neighborhood graph / Leiden clustering were "
-        "computed in PCA space, not in 2D UMAP coordinates."
-    )
+st.info(
+    "UMAP is a visualization layer. Neighborhood graph / Leiden clustering were "
+    "computed in PCA space, not in 2D UMAP coordinates."
+)
 
 if not umap_coords.empty and "treatment_group" in umap_coords.columns:
     st.subheader("Cells by treatment group")

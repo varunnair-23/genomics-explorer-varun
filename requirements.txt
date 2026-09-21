@@ -1,5 +1,2 @@
-streamlit
-pandas
-pyyaml
-requests
-rdkit
+streamlit==1.50.0
+pandas==2.2.3
