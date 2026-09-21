@@ -1,2 +1,2 @@
 The deployed Streamlit app is available here:
-https://stunning-disco-967r6p5pgvw727q6g-8501.app.github.dev/
+https://zany-garbanzo-p7j47xwx54jpfrprj-8501.app.github.dev/
